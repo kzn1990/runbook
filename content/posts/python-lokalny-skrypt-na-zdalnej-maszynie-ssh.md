@@ -4,7 +4,7 @@ date = "2022-03-29T06:30:54+02:00"
 slug = "python-lokalny-skrypt-na-zdalnej-maszynie-ssh"
 draft = false
 tags = ["python", "ssh"]
-featureImage = "https://images.unsplash.com/photo-1600333527715-cc7f665bc332?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxzbmFrZXxlbnwwfHx8fDE2NDg1MzUzNTc&ixlib=rb-1.2.1&q=80&w=2000"
+featureImage = "/content/images/external/python-snake.jpg"
 +++
 
 Czasem jest taka potrzeba uruchomienia jakiegoś lokalnego skryptu/programu na zdalnym hoście. Jeżeli nie chcemy kopiować i umieszczać na hoście tego skryptu możemy użyć ssh:

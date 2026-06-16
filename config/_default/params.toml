@@ -46,7 +46,8 @@ fingerprintAlgorithm = "sha512"
   showDateOnlyInArticle = false
   showDateUpdated = false
   showAuthor = true
-  showHero = false
+  showHero = true
+  heroStyle = "background"
   layoutBackgroundBlur = true
   layoutBackgroundHeaderSpace = true
   showBreadcrumbs = false
@@ -59,7 +60,7 @@ fingerprintAlgorithm = "sha512"
   invertPagination = false
   showReadingTime = true
   showTableOfContents = true
-  showTaxonomies = false
+  showTaxonomies = true
   showCategories = true
   showTags = true
   showCategoriesInSecondaryColor = false
@@ -68,7 +69,8 @@ fingerprintAlgorithm = "sha512"
   showZenMode = false
 
 [list]
-  showHero = false
+  showHero = true
+  heroStyle = "background"
   layoutBackgroundBlur = true
   layoutBackgroundHeaderSpace = true
   showBreadcrumbs = false
@@ -88,7 +90,8 @@ fingerprintAlgorithm = "sha512"
 
 [taxonomy]
   showTermCount = true
-  showHero = false
+  showHero = true
+  heroStyle = "background"
   layoutBackgroundBlur = true
   layoutBackgroundHeaderSpace = true
   showBreadcrumbs = false
@@ -98,7 +101,8 @@ fingerprintAlgorithm = "sha512"
   cardView = false
 
 [term]
-  showHero = false
+  showHero = true
+  heroStyle = "background"
   layoutBackgroundBlur = true
   layoutBackgroundHeaderSpace = true
   showBreadcrumbs = false

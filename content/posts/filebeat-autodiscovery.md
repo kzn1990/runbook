@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2020/12/docker-filebeat-autodiscover.jpg"
 slug = "filebeat-autodiscovery"
 title = "Docker - filebeat autodiscovery"
-
+tags = ["docker", "elk", "filebeat"]
 +++
 
 

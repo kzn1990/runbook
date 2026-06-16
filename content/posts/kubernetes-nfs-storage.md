@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2021/02/kubernetes-nfs-storage.jpg"
 slug = "kubernetes-nfs-storage"
 title = "Kubernetes - nfs storage"
-
+tags = ["k8s"]
 +++
 
 

@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2020/07/docker-mysqldump-1.jpg"
 slug = "docker-backup-bazy-mysql"
 title = "Docker - backup Bazy MySQL"
-
+tags = ["mysql", "docker"]
 +++
 
 

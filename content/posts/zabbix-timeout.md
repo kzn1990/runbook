@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2020/07/zabbix-timeout-1.jpg"
 slug = "zabbix-timeout"
 title = "Zabbix - timeout executing script"
-
+tags = ["zabbix"]
 +++
 
 

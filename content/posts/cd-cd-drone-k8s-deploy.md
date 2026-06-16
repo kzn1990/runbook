@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2022/02/Drone-deploy-k8s.jpg"
 slug = "cd-cd-drone-k8s-deploy"
 title = "CI/CD - drone k8s deploy"
-
+tags = ["k8s", "pipeline", "CI/CD"]
 +++
 
 

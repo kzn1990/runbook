@@ -5,6 +5,7 @@ draft = false
 thumbnail = ""
 slug = "argocd"
 title = "ArgoCD - ingress ssl too many redirects"
+tags = ["argocd", "k8s", "ingress"]
 
 +++
 

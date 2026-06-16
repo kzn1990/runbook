@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2020/07/lets-encrypt-wildcard.jpg"
 slug = "letsencrypt-wildcard"
 title = "Let's encrypt - certyfikat wildcard"
-
+tags = ["lets encrypt"]
 +++
 
 

@@ -5,6 +5,7 @@ draft = false
 thumbnail = "/content/images/2022/07/ansible-jinja.jpg"
 slug = "ansible-split-variable"
 title = "Ansible - split variable"
+tags = ["ansible"]
 
 +++
 

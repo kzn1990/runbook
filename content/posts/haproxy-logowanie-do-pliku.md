@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2020/07/haproxy-logowanie-do-pliku.jpg"
 slug = "haproxy-logowanie-do-pliku"
 title = "HAProxy - logowanie do pliku"
-
+tags = ["haproxy"]
 +++
 
 

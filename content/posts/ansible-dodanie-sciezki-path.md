@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2020/09/ansible-global-path.jpg"
 slug = "ansible-dodanie-sciezki-path"
 title = "Ansible - dodanie ścieżki $PATH"
-
+tags = ["ansible"]
 +++
 
 

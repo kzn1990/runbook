@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2022/02/k3s-nginx-ingress.jpg"
 slug = "k3s-nginx-ingress"
 title = "k3s - nginx ingress"
-
+tags = ["k8s", "k3s", "nginx", "ingress"]
 +++
 
 

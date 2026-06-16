@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2020/09/backup-lxd.jpg"
 slug = "backup-kontenerow-lxd"
 title = "Backup kontenerów LXD"
-
+tags = ["lxd", "backup", "lxc"]
 +++
 
 

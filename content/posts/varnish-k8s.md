@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2022/02/k8s-varnish.jpg"
 slug = "varnish-k8s"
 title = "Varnish - cache serwer w k8s"
-
+tags = ["k8s", "varnish"]
 +++
 
 

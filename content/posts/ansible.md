@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2020/09/ansible-install-package-if-not-installed.jpg"
 slug = "ansible"
 title = "Ansible - instalacja pakietu jeśli nie istnieje"
-
+tags = ["ansible"]
 +++
 
 

@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2022/03/gitlab-ci-environment-variable-1.jpg"
 slug = "gitlab-ci-cd-environment-variable"
 title = "Gitlab CI/CD - environment variable"
-
+tags = ["CI/CD", "gitlab", "pipeline"]
 +++
 
 

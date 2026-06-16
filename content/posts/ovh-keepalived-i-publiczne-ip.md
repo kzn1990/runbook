@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2020/07/ovh-keepalived-vrf-2.jpg"
 slug = "ovh-keepalived-i-publiczne-ip"
 title = "OVH - keepalived i publiczne ip (VRF)"
-
+tags = ["keepalived", "ovh"]
 +++
 
 

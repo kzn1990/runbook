@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2020/07/xtradb-cluster.jpg"
 slug = "xtradb-cluster"
 title = "XtraDB Cluster"
-
+tags = ["mysql"]
 +++
 
 

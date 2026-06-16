@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2020/12/microk8s-daemon-proxy.jpg"
 slug = "microk8s-fail-snap-microk8s-daemon-proxy-is-not-running"
 title = "Microk8s - FAIL: snap.microk8s.daemon-proxy"
-
+tags = ["k8s", "lxd"]
 +++
 
 

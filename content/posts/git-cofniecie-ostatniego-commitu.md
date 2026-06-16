@@ -5,7 +5,7 @@ draft = false
 thumbnail = "/content/images/2020/09/branches-undo-last-commit.jpg"
 slug = "git-cofniecie-ostatniego-commitu"
 title = "Git - cofnięcie ostatniego commitu"
-
+tags = ["git"]
 +++
 
 

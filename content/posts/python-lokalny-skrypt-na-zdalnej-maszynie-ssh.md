@@ -5,7 +5,7 @@ draft = false
 thumbnail = "https://images.unsplash.com/photo-1600333527715-cc7f665bc332?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxzbmFrZXxlbnwwfHx8fDE2NDg1MzUzNTc&ixlib=rb-1.2.1&q=80&w=2000"
 slug = "python-lokalny-skrypt-na-zdalnej-maszynie-ssh"
 title = "Python - lokalny skrypt na zdalnej maszynie (ssh)"
-
+tags = ["python", "ssh"]
 +++
 
 

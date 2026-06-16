@@ -13,13 +13,12 @@ title = "Michał Kuzdzal"
 
   [params.author]
     name = "Michał Kuzdzal"
-    # email = "TODO@email.com" # TODO: uzupełnić
-    # image = "images/avatar.jpg" # TODO: dodać plik avatara
+    image = "img/avatar.jpg"
     imageQuality = 96
     headline = "SRE / DevOps Engineer"
-    bio = "Inżynier SRE/DevOps. MySQL/Percona, Docker, Kubernetes, GitLab CI, Terraform. Dzielę się doświadczeniami z pracy z infrastrukturą."
+    bio = "SRE/DevOps. Notatki z pracy: Kubernetes, CI/CD, infrastruktura jako kod. # TODO: dopracować bio"
     links = [
       { github = "https://github.com/kzn1990" },
-      # { linkedin = "https://linkedin.com/in/TODO" }, # TODO: uzupełnić
-      # { email = "mailto:TODO@email.com" }, # TODO: uzupełnić
+      { linkedin = "https://www.linkedin.com/in/michal-kuzdzal/" },
+      { email = "mailto:blog@kuzdzal.pl" },
     ]

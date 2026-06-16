@@ -2,7 +2,7 @@ baseURL = "https://michal.kuzdzal.pl/"
 theme = "blowfish"
 defaultContentLanguage = "pl"
 enableRobotsTXT = true
-summaryLength = 0
+summaryLength = 30
 buildDrafts = false
 buildFuture = false
 

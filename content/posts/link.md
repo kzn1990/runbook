@@ -1,13 +1,11 @@
 +++
-date = 2020-06-19T20:54:12+02:00
-description = ""
-draft = false
-thumbnail = "/content/images/2020/06/Critical-thinklng-1.jpg"
-slug = "link"
 title = "Zbiór ciekawych linków"
-
+date = "2020-06-19T20:54:12+02:00"
+slug = "link"
+draft = false
+tags = []
+featureImage = "/content/images/2020/06/Critical-thinklng-1.jpg"
 +++
-
 
 [Ansible kurs od redhat'a](https://www.redhat.com/rhtapps/promo-do007/?segment=9),
 

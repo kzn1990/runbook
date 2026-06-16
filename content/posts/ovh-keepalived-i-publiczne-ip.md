@@ -1,25 +1,24 @@
 +++
-date = 2020-07-03T20:38:08+02:00
-description = ""
-draft = false
-thumbnail = "/content/images/2020/07/ovh-keepalived-vrf-2.jpg"
-slug = "ovh-keepalived-i-publiczne-ip"
 title = "OVH - keepalived i publiczne ip (VRF)"
+date = "2020-07-03T20:38:08+02:00"
+slug = "ovh-keepalived-i-publiczne-ip"
+draft = false
 tags = ["keepalived", "ovh"]
+featureImage = "/content/images/2020/07/ovh-keepalived-vrf-2.jpg"
 +++
-
 
 Keepalived, narzędzie do zapewnienia loadbalancingu i wysokiej dostępności (HA).
 
 ### Wstęp
 
-Jak wiadomo w OVH, aby przypisać adresację publiczną, trzeba wygenerować w panelu adres mac, który następnie musimy przypisać serwerowi. Powstaje więc problem, jeżeli chcemy połączyć serwery keepalive'm musimy przypisać obu serwerom te same mac addressy, co może prowadzić do różnych problemów z warstwą L2.Dodatkowo, jeżeli chcemy przypisać kilka publiczny adresów ip, niezbędne będzie zastosowanie VRF'ów (virtual routing and forwarding).
+Jak wiadomo w OVH, aby przypisać adresację publiczną, trzeba wygenerować w panelu adres mac, który następnie musimy przypisać serwerowi. Powstaje więc problem, jeżeli chcemy połączyć serwery keepalive'm musimy przypisać obu serwerom te same mac addressy, co może prowadzić do różnych problemów z warstwą L2.\
+Dodatkowo, jeżeli chcemy przypisać kilka publiczny adresów ip, niezbędne będzie zastosowanie VRF'ów (virtual routing and forwarding).
 
 ### Tablice routingu
 
-Konfiguracja z systemd, edytujemy plik _/etc/iproute2/rt_tables_ i dodajemy nowe tablice:
+Konfiguracja z systemd, edytujemy plik */etc/iproute2/rt_tables* i dodajemy nowe tablice:
 
-```bash
+``` bash
 100     net-bgp0
 101     net-bgp1
 102     net-bgp2
@@ -29,9 +28,9 @@ Konfiguracja z systemd, edytujemy plik _/etc/iproute2/rt_tables_ i dodajemy nowe
 
 ### Konfiguracja keepalived
 
-Plik konfiguracyjny _/etc/keepalived/keepalived.conf_:
+Plik konfiguracyjny */etc/keepalived/keepalived.conf*:
 
-```bash
+``` bash
 vrrp_instance lb-cm {
 state BACKUP
 interface eth0
@@ -58,9 +57,9 @@ notify /etc/keepalived/keepalivednotify.sh
 
 ### Podmiana maców
 
-W skrypcie notify, oprócz powiadomienia na slacu o zmianie stanów adresacji, możemy umieścić podmianę mac adresów _/etc/keepalived/keepalivednotify.sh_:
+W skrypcie notify, oprócz powiadomienia na slacu o zmianie stanów adresacji, możemy umieścić podmianę mac adresów */etc/keepalived/keepalivednotify.sh*:
 
-```bash
+``` bash
 #!/bin/bash
 state=$3
 echo $3  > /var/run/keepalive.state
@@ -115,5 +114,6 @@ esac
 
 ### Linki
 
-[Virtual routing and forwarding](https://www.kernel.org/doc/Documentation/networking/vrf.txt),[Keepalived](https://keepalived.org/index.html#).
+[Virtual routing and forwarding](https://www.kernel.org/doc/Documentation/networking/vrf.txt),\
+[Keepalived](https://keepalived.org/index.html#).
 

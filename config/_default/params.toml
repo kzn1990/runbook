@@ -1,4 +1,5 @@
-colorScheme = "blowfish"
+colorScheme = "ocean"
+defaultBackgroundImage = "img/background.svg"
 defaultAppearance = "dark"
 autoSwitchAppearance = true
 
@@ -12,7 +13,7 @@ replyByEmail = false
 disableImageOptimization = false
 disableImageOptimizationMD = false
 disableTextInHeader = false
-hotlinkFeatureImage = false
+hotlinkFeatureImage = true
 
 fingerprintAlgorithm = "sha512"
 
@@ -27,14 +28,15 @@ fingerprintAlgorithm = "sha512"
   showScrollToTop = true
 
 [homepage]
-  layout = "profile"
+  layout = "background"
+  homepageImage = "img/background.svg"
   showRecent = true
-  showRecentItems = 10
+  showRecentItems = 6
   showMoreLink = true
   showMoreLinkDest = "/posts/"
-  cardView = false
+  cardView = true
   cardViewScreenWidth = false
-  layoutBackgroundBlur = false
+  layoutBackgroundBlur = true
   disableHeroImageFilter = false
 
 [article]

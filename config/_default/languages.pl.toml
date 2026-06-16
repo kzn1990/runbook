@@ -1,0 +1,25 @@
+disabled = false
+locale = "pl"
+label = "Polski"
+weight = 1
+title = "Michał Kuzdzal"
+
+[params]
+  displayName = "PL"
+  isoCode = "pl"
+  rtl = false
+  dateFormat = "2 January 2006"
+  description = "Dziennik pracy SRE/DevOps — MySQL, Percona, Docker, Kubernetes, GitLab CI, Terraform"
+
+  [params.author]
+    name = "Michał Kuzdzal"
+    # email = "TODO@email.com" # TODO: uzupełnić
+    # image = "images/avatar.jpg" # TODO: dodać plik avatara
+    imageQuality = 96
+    headline = "SRE / DevOps Engineer"
+    bio = "Inżynier SRE/DevOps. MySQL/Percona, Docker, Kubernetes, GitLab CI, Terraform. Dzielę się doświadczeniami z pracy z infrastrukturą."
+    links = [
+      { github = "https://github.com/kzn1990" },
+      # { linkedin = "https://linkedin.com/in/TODO" }, # TODO: uzupełnić
+      # { email = "mailto:TODO@email.com" }, # TODO: uzupełnić
+    ]

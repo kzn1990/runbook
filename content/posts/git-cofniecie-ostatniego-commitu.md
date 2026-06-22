@@ -7,7 +7,7 @@ tags = ["git"]
 featureImage = "/content/images/2020/09/branches-undo-last-commit.jpg"
 +++
 
-Przy pracy z gitem nie raz spotkamy się z sytuacją kiedy będziemy musieli wycofać ostatnio dodany commit. Z pomocą przychodzi reset z oderwaniem "głowy" o jeden commit do góry:
+Przy pracy z gitem nie raz spotkamy się z sytuacją kiedy będziemy musieli wycofać ostatnio dodany commit. Z pomocą przychodzi reset z oderwaniem „głowy" o jeden commit do góry:
 
 ``` bash
 git reset --soft HEAD~1

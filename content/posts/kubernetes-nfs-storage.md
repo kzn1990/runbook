@@ -7,7 +7,7 @@ tags = ["k8s"]
 featureImage = "/content/images/2021/02/kubernetes-nfs-storage.jpg"
 +++
 
-Do domowego laba k8s bardzo fajnie sprawdza się **microk8s**. Jest instalowany przez *snapa,* jego konfiguracja jest banalna i co najważniejsze posiada masę addonów, które ułatwiają odpalenie wiele rzeczy w sekundę. Jednym z takich addonów jest "storage", który utworzy nam storage class w naszym clustrze alokując storage jako *host directory*.\
+Do domowego laba k8s bardzo fajnie sprawdza się **microk8s**. Jest instalowany przez *snapa,* jego konfiguracja jest banalna i co najważniejsze posiada masę addonów, które ułatwiają odpalenie wiele rzeczy w sekundę. Jednym z takich addonów jest „storage", który utworzy nam storage class w naszym clustrze alokując storage jako *host directory*.\
 Przydatne jednak może być podpięcie zewnętrznego storygu jak np. NFS.
 
 ### Przygotowanie

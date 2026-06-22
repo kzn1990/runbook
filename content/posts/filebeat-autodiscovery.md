@@ -32,7 +32,7 @@ Do głównej konfiguracji *filebeat.yml* dodajemy wpis (w tym przypadku dla ngin
                       paths:
                         - "/var/lib/docker/containers/${data.docker.container.id}/*.log"
 
-Filebeat będzie wyszukiwał logów do każdego kontenera zbudowanego z obrazu nginxa i podpinał do niego moduł "nginx".
+Filebeat będzie wyszukiwał logów do każdego kontenera zbudowanego z obrazu nginxa i podpinał do niego moduł „nginx".
 
 Parametry, po których możemy wyszukiwać konkretne kontenery, jest oczywiście więcej, oto kilka przykładowych:
 

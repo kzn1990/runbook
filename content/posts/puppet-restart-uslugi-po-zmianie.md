@@ -21,7 +21,7 @@ Następnie w pliku, którym chcemy striggerować nasz serwis dodajemy parametr '
 
 ``` bash
 file { '/etc/stunnel/stunnel.pem': ## {{{
-     source      => 'puppet:///modules/lb-hq-cm-ha/stunnel-mysql.pem',
+     source      => 'puppet:///modules/lb-ha/stunnel-mysql.pem',
      owner       => root,
      group       => root,
      mode        => '0644',

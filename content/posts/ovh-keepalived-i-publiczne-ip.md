@@ -31,7 +31,7 @@ Konfiguracja z systemd, edytujemy plik */etc/iproute2/rt_tables* i dodajemy nowe
 Plik konfiguracyjny */etc/keepalived/keepalived.conf*:
 
 ``` bash
-vrrp_instance lb-cm {
+vrrp_instance lb {
 state BACKUP
 interface eth0
 virtual_router_id 53

@@ -1,0 +1,99 @@
+{{/*
+  JSON-LD @graph — override Blowfisha (themes/blowfish/layouts/partials/schema.html).
+  Buduje węzły jako dict/slice i serializuje przez jsonify (sam escapuje + pilnuje przecinków).
+  Węzły łączone po stałych @id: #person, #website, #blog. Patrz CLAUDE.md.
+*/}}
+{{- $iso := "2006-01-02T15:04:05-07:00" -}}
+{{- $home := site.Home.Permalink -}}
+{{- $author := .Site.Params.Author -}}
+{{- $locale := .Site.Language.Locale -}}
+{{- $license := "https://creativecommons.org/licenses/by/4.0/" -}}
+{{- $personID := printf "%s#person" $home -}}
+{{- $websiteID := printf "%s#website" $home -}}
+{{- $blogID := printf "%s#blog" $home -}}
+
+{{/* ---------- Person (na każdej stronie) ---------- */}}
+{{- $sameAs := slice -}}
+{{- range $author.links -}}
+  {{- range $k, $v := . -}}
+    {{- if not (hasPrefix $v "mailto:") -}}{{- $sameAs = $sameAs | append $v -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $names := split $author.name " " -}}
+{{- $person := dict "@type" "Person" "@id" $personID "url" $home "name" $author.name -}}
+{{- if gt (len $names) 1 -}}
+  {{- $person = merge $person (dict "givenName" (index $names 0) "familyName" (index $names (sub (len $names) 1))) -}}
+{{- end -}}
+{{- with $author.headline -}}{{- $person = merge $person (dict "jobTitle" .) -}}{{- end -}}
+{{- with $author.bio -}}{{- $person = merge $person (dict "description" .) -}}{{- end -}}
+{{- with $locale -}}{{- $person = merge $person (dict "knowsLanguage" .) -}}{{- end -}}
+{{- with $author.image -}}
+  {{- with (resources.Get .) -}}
+    {{- $person = merge $person (dict "image" (dict "@type" "ImageObject" "@id" (printf "%s#person-image" $home) "url" .Permalink "width" .Width "height" .Height)) -}}
+  {{- end -}}
+{{- end -}}
+{{- if $sameAs -}}{{- $person = merge $person (dict "sameAs" $sameAs) -}}{{- end -}}
+
+{{/* ---------- WebSite (full na home, slim gdzie indziej) ---------- */}}
+{{- $websiteSlim := dict "@type" "WebSite" "@id" $websiteID "url" $home "name" .Site.Title -}}
+{{- $websiteFull := merge $websiteSlim (dict "publisher" (dict "@id" $personID)) -}}
+{{- with .Site.Params.description -}}{{- $websiteFull = merge $websiteFull (dict "description" .) -}}{{- end -}}
+{{- with $locale -}}{{- $websiteFull = merge $websiteFull (dict "inLanguage" .) -}}{{- end -}}
+
+{{/* ---------- BreadcrumbList (poza root) ---------- */}}
+{{- $crumbs := slice -}}
+{{- $pos := 0 -}}
+{{- range .Ancestors.Reverse -}}
+  {{- $pos = add $pos 1 -}}
+  {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $pos "name" .Title "item" .Permalink) -}}
+{{- end -}}
+{{- $pos = add $pos 1 -}}
+{{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $pos "name" .Title "item" .Permalink) -}}
+{{- $breadcrumb := dict "@type" "BreadcrumbList" "@id" (printf "%s#breadcrumb" .Permalink) "itemListElement" $crumbs -}}
+
+{{/* ---------- Detekcja typu strony ---------- */}}
+{{- $base := "" -}}
+{{- with .File -}}{{- $base = .ContentBaseName -}}{{- end -}}
+
+{{- $graph := slice -}}
+{{- if .IsHome -}}
+  {{/* Home = WebSite(full) + Person + Blog(index) */}}
+  {{- $blog := dict "@type" "Blog" "@id" $blogID "isPartOf" (dict "@id" $websiteID) "mainEntityOfPage" (dict "@id" (printf "%s#webpage" $home)) "name" (printf "%s — Blog" .Site.Title) "publisher" (dict "@id" $personID) "license" $license -}}
+  {{- with .Site.Params.description -}}{{- $blog = merge $blog (dict "description" .) -}}{{- end -}}
+  {{- with $locale -}}{{- $blog = merge $blog (dict "inLanguage" .) -}}{{- end -}}
+  {{- $graph = $graph | append $websiteFull $person $blog -}}
+
+{{- else if eq $base "about" -}}
+  {{/* O mnie = WebSite(slim) + Person + ProfilePage + Breadcrumb */}}
+  {{- $profile := dict "@type" "ProfilePage" "@id" (printf "%s#webpage" .Permalink) "url" .Permalink "name" .Title "isPartOf" (dict "@id" $websiteID) "mainEntity" (dict "@id" $personID) "breadcrumb" (dict "@id" (printf "%s#breadcrumb" .Permalink)) -}}
+  {{- with $locale -}}{{- $profile = merge $profile (dict "inLanguage" .) -}}{{- end -}}
+  {{- with .Date -}}{{- $profile = merge $profile (dict "dateCreated" (.Format $iso)) -}}{{- end -}}
+  {{- with .Lastmod -}}{{- $profile = merge $profile (dict "dateModified" (.Format $iso)) -}}{{- end -}}
+  {{- $graph = $graph | append $websiteSlim $person $profile $breadcrumb -}}
+
+{{- else if eq .Section "posts" -}}
+  {{/* Post = WebSite(slim) + Person + WebPage + BlogPosting + Breadcrumb */}}
+  {{- $webpage := dict "@type" "WebPage" "@id" (printf "%s#webpage" .Permalink) "url" .Permalink "name" .Title "isPartOf" (dict "@id" $websiteID) "breadcrumb" (dict "@id" (printf "%s#breadcrumb" .Permalink)) -}}
+  {{- with $locale -}}{{- $webpage = merge $webpage (dict "inLanguage" .) -}}{{- end -}}
+  {{- $post := dict "@type" "BlogPosting" "@id" (printf "%s#blogposting" .Permalink) "url" .Permalink "mainEntityOfPage" (dict "@id" (printf "%s#webpage" .Permalink)) "isPartOf" (dict "@id" $blogID) "headline" .Title "author" (dict "@id" $personID) "publisher" (dict "@id" $personID) "license" $license -}}
+  {{- with .Description -}}{{- $post = merge $post (dict "description" .) -}}{{- end -}}
+  {{- with (site.GetPage .Section) -}}{{- $post = merge $post (dict "articleSection" .Title) -}}{{- end -}}
+  {{- with .Params.tags -}}{{- $post = merge $post (dict "keywords" .) -}}{{- end -}}
+  {{- with $locale -}}{{- $post = merge $post (dict "inLanguage" .) -}}{{- end -}}
+  {{- with .PublishDate -}}{{- $post = merge $post (dict "datePublished" (.Format $iso)) -}}{{- end -}}
+  {{- with .Lastmod -}}{{- $post = merge $post (dict "dateModified" (.Format $iso)) -}}{{- end -}}
+  {{- with .Params.featureImage -}}
+    {{- $post = merge $post (dict "image" (dict "@type" "ImageObject" "@id" (printf "%s#blogposting-image" $.Permalink) "url" (. | absURL))) -}}
+  {{- end -}}
+  {{- $graph = $graph | append $websiteSlim $person $webpage $post $breadcrumb -}}
+
+{{- else -}}
+  {{/* Pozostałe = WebSite(slim) + Person + WebPage + Breadcrumb */}}
+  {{- $webpage := dict "@type" "WebPage" "@id" (printf "%s#webpage" .Permalink) "url" .Permalink "name" .Title "isPartOf" (dict "@id" $websiteID) "breadcrumb" (dict "@id" (printf "%s#breadcrumb" .Permalink)) -}}
+  {{- with $locale -}}{{- $webpage = merge $webpage (dict "inLanguage" .) -}}{{- end -}}
+  {{- $graph = $graph | append $websiteSlim $person $webpage $breadcrumb -}}
+{{- end -}}
+
+<script type="application/ld+json">
+{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify (dict "indent" "  ") | safeJS }}
+</script>

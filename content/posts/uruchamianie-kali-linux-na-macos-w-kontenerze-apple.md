@@ -4,7 +4,7 @@ date = "2025-07-08T16:35:00+02:00"
 slug = "uruchamianie-kali-linux-na-macos-w-kontenerze-apple"
 draft = false
 tags = ["kali", "linux"]
-featureImage = "/content/images/2025/08/Kali.png"
+featureImage = "/content/images/2025/08/Kali.webp"
 +++
 
 Dzięki nowej **konteneryzacji Apple** (ogłoszonej podczas WWDC 2025) możesz teraz bezproblemowo uruchomić **Kali Linux** bezpośrednio na swoim Macu z Apple Silicon. To idealne rozwiązanie dla tych, którzy chcą szybko testować narzędzia bezpieczeństwa bez konieczności stawiania pełnej maszyny wirtualnej.

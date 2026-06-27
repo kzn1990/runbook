@@ -4,7 +4,7 @@ date = "2025-07-28T13:18:00+02:00"
 slug = "kubernetes-133"
 draft = false
 tags = ["kubernetes", "k8s"]
-featureImage = "/content/images/2025/08/k8s-pod-resize-sidecar.png"
+featureImage = "/content/images/2025/08/k8s-pod-resize-sidecar.webp"
 +++
 
 ### TL;DR
@@ -31,7 +31,7 @@ Wzorzec **sidecar**, polegający na umieszczaniu dodatkowych kontenerów pomocni
 2.  Dopiero później startuje główny kontener aplikacji.
 3.  Sidecary działają przez cały cykl życia Podu i kończą działanie dopiero po głównym kontenerze.
 
-![](/content/images/2025/08/sidecar_before_133.png)
+![](/content/images/2025/08/sidecar_before_133.webp)
 
 Ta fundamentalna zmiana w cyklu życia Podu eliminuje wcześniejsze problemy i sprawia, że złożone architektury z sidecarami są o wiele bardziej niezawodne i łatwiejsze w utrzymaniu.
 

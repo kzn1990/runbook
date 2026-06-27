@@ -4,7 +4,7 @@ date = "2026-06-22T06:00:00+02:00"
 slug = "kubernetes-136"
 draft = false
 tags = ["kubernetes", "k8s", "devops"]
-featureImage = "/content/images/2026/06/k8s-136-cover.png"
+featureImage = "/content/images/2026/06/k8s-136-cover.webp"
 +++
 
 Kubernetes 1.36 („Haru”) przynosi kilka istotnych zmian, szczególnie w kontekście bezpieczeństwa i zarządzania złożonymi zasobami. Poniżej krótkie podsumowanie tego, co warto wiedzieć przed aktualizacją.

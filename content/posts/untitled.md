@@ -4,7 +4,7 @@ date = "2025-06-01T09:31:00+02:00"
 slug = "untitled"
 draft = false
 tags = ["haproxy"]
-featureImage = "/content/images/2025/08/Gemini_Generated_Image_xln6w1xln6w1xln6.png"
+featureImage = "/content/images/2025/08/Gemini_Generated_Image_xln6w1xln6w1xln6.webp"
 +++
 
 Jeśli zależy Ci na wykorzystaniu pełni możliwości HAProxy, w tym najnowszych funkcji takich jak obsługa protokołu **QUIC**, często konieczna jest kompilacja z kodu źródłowego. Domyślne pakiety HAProxy dostępne w oficjalnych repozytoriach systemów (np. przez `apt install haproxy`) zazwyczaj nie zawierają wsparcia dla QUIC, ponieważ wymaga to użycia niestandardowej biblioteki OpenSSL. Co więcej, obsługa QUIC jest często dostępna w wersjach komercyjnych (HAProxy Enterprise), dlatego ręczna kompilacja jest najlepszym sposobem, aby uzyskać tę funkcjonalność w wersji darmowej.

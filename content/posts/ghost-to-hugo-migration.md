@@ -4,7 +4,7 @@ date = "2026-06-22T08:00:00+02:00"
 slug = "ghost-to-hugo-migration"
 draft = false
 tags = ["kubernetes", "hugo", "devops", "self-hosted", "ghost"]
-featureImage = "/content/images/2026/06/ghost-hugo-migration.png"
+featureImage = "/content/images/2026/06/ghost-hugo-migration.webp"
 +++
 
 Pierwszy raz, gdy stawiałem bloga na Kubernetesie, wydawało się to idealnym rozwiązaniem. K8s daje skalowalność, self-healing, deklaratywną konfigurację, GitOps. Do tego dochodzi satysfakcja zbudowania pełnego stosu od zera: klastra, storage'u, monitoringu, CI/CD. To świetny projekt edukacyjny, który uczy wielu rzeczy naraz.

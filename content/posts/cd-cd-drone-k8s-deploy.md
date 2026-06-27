@@ -33,7 +33,7 @@ Stwórzmy pipeline, który utworzy nam testowy deployment gotowy do dalszej prac
 
 Kiedy mamy już przygotowany pipeline, to musimy dodać dla danego projektu w **Drone** odpowiednie secrets'y:
 
-![](/content/images/2022/02/Drone_secrets.png)
+![](/content/images/2022/02/Drone_secrets.webp)
 
 Secret'y możną wyciągnąć z clustra za pomocą komend:
 
@@ -48,7 +48,7 @@ Secret'y możną wyciągnąć z clustra za pomocą komend:
 
 Jeżeli wszystko poszło dobrze po odpaleniu pipelina w logach consoli powinniśmy zobaczyć nowo utworzony namespace, który jest gotowy do dalszych prac:
 
-![](/content/images/2022/02/obraz_2022-02-06_143135.png)
+![](/content/images/2022/02/obraz_2022-02-06_143135.webp)
 
 Działamy tutaj na uprawnieniach *cluster-admin* i oczywiście w celach labowych nie ma w tym nic złego. Do nadawani odpowiednich uprawnień w clustrze polecam zapoznać się z rozwiązaniem ***permission-manager**.*
 

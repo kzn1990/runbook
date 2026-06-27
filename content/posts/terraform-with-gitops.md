@@ -4,7 +4,7 @@ date = "2025-07-10T12:31:00+02:00"
 slug = "terraform-with-gitops"
 draft = false
 tags = ["terraform", "git", "gitlab"]
-featureImage = "/content/images/2025/08/Terraform_i_GitOps_w_GitLab_CI-CD.png"
+featureImage = "/content/images/2025/08/Terraform_i_GitOps_w_GitLab_CI-CD.webp"
 +++
 
 Dziś opiszę, jak zintegrować **Terraform** z **GitLab CI/CD**, aby stworzyć wydajny i niezawodny proces GitOps.
@@ -75,7 +75,7 @@ Poniżej przedstawiam, jak powinien wyglądać plik `.gitlab-ci.yml`:
 
 Sam pipline prezentuje się następująco:
 
-![](/content/images/2025/08/image.png)
+![](/content/images/2025/08/image.webp)
 
 ------------------------------------------------------------------------
 

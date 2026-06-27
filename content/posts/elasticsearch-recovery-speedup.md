@@ -4,7 +4,7 @@ date = "2025-08-12T13:19:19+02:00"
 slug = "elasticsearch-recovery-speedup"
 draft = false
 tags = ["elasticsearch"]
-featureImage = "/content/images/2025/08/elasticsearch-speedup-recovery.png"
+featureImage = "/content/images/2025/08/elasticsearch-speedup-recovery.webp"
 +++
 
 Czasem trzeba zrobić rolling restart w klastrze Elasticsearch - wymienić sprzęt, zaktualizować wersję lub przenieść shardy na nowy węzeł. Bez odpowiedniego przygotowania proces może trwać długo i generować dużo niepotrzebnego ruchu.\

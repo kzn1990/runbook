@@ -4,7 +4,7 @@ date = "2026-06-24T08:00:00+02:00"
 slug = "argo-events-deep-dive"
 draft = false
 tags = ["kubernetes", "argo", "devops", "event-driven", "automation"]
-featureImage = "/content/images/2026/06/argo-events-deep-dive.png"
+featureImage = "/content/images/2026/06/argo-events-deep-dive.webp"
 +++
 
 Argo CD zna każdy. Argo Workflows — większość. Argo Events? Mało kto. A szkoda, bo to brakujące ogniwo w ekosystemie Argo, które pozwala zamienić Kubernetes w maszynę event-driven.

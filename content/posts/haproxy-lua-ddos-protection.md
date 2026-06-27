@@ -4,7 +4,7 @@ date = "2025-07-22T14:33:00+02:00"
 slug = "haproxy-lua-ddos-protection"
 draft = false
 tags = ["haproxy", "linux", "lua", "ddos"]
-featureImage = "/content/images/2025/08/rate-limit-HAProxy-Lua.png"
+featureImage = "/content/images/2025/08/rate-limit-HAProxy-Lua.webp"
 +++
 
 ## Wstęp

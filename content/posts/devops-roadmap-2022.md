@@ -7,5 +7,5 @@ tags = []
 featureImage = "/content/images/2020/07/mountains-2693238_1920.jpg"
 +++
 
-![Roadmap devops 2022](/content/images/2020/07/devops_roadmap.png)
+![Roadmap devops 2022](/content/images/2020/07/devops_roadmap.webp)
 

@@ -4,7 +4,7 @@ date = "2025-08-08T05:01:41+02:00"
 slug = "puppet-przejety-przez-perforce-co-sie-zmienilo-i-jakie-sa-inne-alternatywy-dla-puppet"
 draft = false
 tags = []
-featureImage = "/content/images/2025/08/puppet-vs-openvox.png"
+featureImage = "/content/images/2025/08/puppet-vs-openvox.webp"
 +++
 
 Puppet przez lata był jednym z filarów automatyzacji i konfiguracji w dużych środowiskach IT. W 2022 roku projekt został przejęty przez firmę **Perforce**, a pod koniec 2024 roku ogłoszono poważne zmiany w sposobie dystrybucji i licencjonowania.

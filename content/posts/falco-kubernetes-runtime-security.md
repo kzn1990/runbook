@@ -4,7 +4,7 @@ date = "2026-06-23T21:30:00+02:00"
 slug = "falco-kubernetes-runtime-security"
 draft = false
 tags = ["kubernetes", "falco", "security", "devops", "sre"]
-featureImage = "/content/images/2026/06/falco-kubernetes-runtime-security.png"
+featureImage = "/content/images/2026/06/falco-kubernetes-runtime-security.webp"
 +++
 
 ## Wstęp

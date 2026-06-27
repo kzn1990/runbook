@@ -4,7 +4,7 @@ date = "2025-08-01T14:42:00+02:00"
 slug = "argocd-app-of-apps-jak-zarzadzac-gitops-w-k8s"
 draft = false
 tags = ["k8s", "argocd", "devops", "git", "gitops"]
-featureImage = "/content/images/2025/08/argocd-app-of-apps.png"
+featureImage = "/content/images/2025/08/argocd-app-of-apps.webp"
 +++
 
 W świecie **Kubernetes**, zarządzanie rosnącą liczbą aplikacji i ich konfiguracjami staje się wyzwaniem. Tradycyjne podejścia często prowadzą do powielania konfiguracji i trudności w utrzymaniu spójności w różnych środowiskach (**staging** i **production**). Właśnie tutaj z pomocą przychodzi wzorzec **App-of-Apps** (aplikacja aplikacji) w **ArgoCD**, który pozwala na **skalowalne zarządzanie** całym ekosystemem aplikacji z jednego, centralnego miejsca.

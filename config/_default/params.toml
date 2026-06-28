@@ -12,6 +12,7 @@ replyByEmail = false
 
 disableImageOptimization = false
 disableImageOptimizationMD = false
+disableImageZoom = true
 disableTextInHeader = false
 hotlinkFeatureImage = true
 
